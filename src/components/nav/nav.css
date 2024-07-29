@@ -18,7 +18,7 @@
 }
 
 .nav-bg {
-    background-color: blue;
+    background-color: var(--cream);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -42,7 +42,8 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    column-gap: 20%;
+    column-gap: 5%;
+    padding: 0 15px;
 }
 
 .nav-content > div {
@@ -84,4 +85,31 @@
 #nav-contact:hover {
     background-color: var(--red);
     color: var(--cream);
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-wrapper {
+        --height: 45px;
+    }
+
+    .nav-bg {
+        bottom: 0;
+    }
+
+    .nav-content-wrap {
+        justify-content: center;
+    }
+
+    .nav-content {
+        max-width: 320px;
+        width: 100%;
+        padding:0 10px;
+        column-gap: 10%;
+    }
+
+    .nav-content > div {
+        text-transform: uppercase;
+        color: var(--red);
+        font-size: 12px;
+    }
 }

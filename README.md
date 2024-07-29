@@ -6,4 +6,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Animation - GSAP
+Gsap - Animation plugin using JS
+
+Figma - Design and prototyping
