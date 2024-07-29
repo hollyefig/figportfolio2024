@@ -1,0 +1,107 @@
+.header-wrapper {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-wrapper > div {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.header-left {
+    background-color: var(--dark-blue);
+    border-bottom-right-radius: 265px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.header-illust-wrapper {
+    max-width: 633px;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.header-illust-wrapper img {
+    height: 100vh;
+    position: absolute;
+    top: -70px;
+    right: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 30px 0 7%;
+}
+
+.header-right-wrapper {
+    position: relative;
+    max-width: 390px;
+    width: 100%;
+    height: auto;
+}
+
+.header-leaf {
+    background-color: var(--light-blue);
+    opacity: 0;
+    width: 100%;
+    height: 258px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 200px;
+    position: relative;
+}
+
+.header-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    bottom: -52px;
+    right: -16px;
+}
+
+.header-icons > div {
+    opacity: 0;
+    max-width: 90px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    top: 30px;
+}
+.header-icons > div > svg {
+    width: 100%;
+}
+
+.header-name {
+    position: absolute;
+    /* top: -50px; */
+    top: -10px;
+    left: 40px;
+    max-width: 312px;
+    width: 90%;
+    height: auto;
+}
+
+.header-name > svg {
+    width: 100%;
+}
+
+.name-holly {
+    stroke-width: 1.5px;
+    stroke: var(--med-blue);
+    stroke-dasharray: 390px;
+    stroke-dashoffset: 390px;
+}
+.name-fig {
+    stroke-width: 1.5px;
+    stroke: var(--dark-blue);
+    stroke-dasharray: 806px;
+    stroke-dashoffset: 806px;
+}
