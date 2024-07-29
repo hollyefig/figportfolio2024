@@ -5,12 +5,15 @@ import "./index.css";
 // import { gsap } from "gsap";
 import Nav from "./components/nav/Nav";
 import Header from "./components/header/Header";
+import Work from "./components/work/Work";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Nav />
     <Header />
+    <div class='spacer'></div>
+    <Work />
   </React.StrictMode>
 );
 

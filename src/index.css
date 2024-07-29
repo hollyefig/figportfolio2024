@@ -56,3 +56,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.spacer {
+  height: 13vh;
+  width: 100%;
+}
+
+.subheader {
+  font-family: Raleway;
+font-size: 55px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+text-transform: uppercase;
+color: var(--dark-blue)
+}
