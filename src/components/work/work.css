@@ -62,3 +62,34 @@
     color: var(--cream)!important;
     transition: color .8s ease-out;
 }
+
+/* * Gallery */
+
+.gallery-prev-wrapper {
+    width: 100%;
+    height: 254px;
+    padding: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-template-columns: repeat(3, 234px); */
+    column-gap: 15px;
+    justify-content: start;
+    margin: 5% 0;
+}
+
+.gallery-thumb {
+    width: 234px;
+    aspect-ratio: 1 / 1;
+    border-bottom-right-radius: 63px;
+    background-size: contain;
+    opacity: 0;
+    cursor: pointer;
+    position: relative;
+    left: 40px;
+}
+
+.gallery-thumb:hover {
+    opacity: 1;
+}
