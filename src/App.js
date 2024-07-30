@@ -38,7 +38,7 @@ function App() {
     <>
       <Nav bg={navbg} mob={mob} />
       <Header />
-      <div class='spacer'></div>
+      <div className='spacer'></div>
       <Work />
     </>
   );

@@ -93,3 +93,130 @@
 .gallery-thumb:hover {
     opacity: 1;
 }
+
+/* * Display */
+
+.display-wrapper {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    column-gap: 5%;
+}
+
+.display-wrapper > div {
+    padding: 5% 0;
+}
+
+.display-left {
+    flex: 1.3;
+    position: relative;
+    /* min-height: 50vh; */
+    height: auto;
+}
+
+.left-leaf-bg {
+    max-width: 480px;
+    width: 80%;
+    aspect-ratio: 2 / 1.4;
+    background-color: var(--red);
+    border-top-left-radius: 213px;
+    border-bottom-right-radius: 213px;
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+}
+
+.left-display-div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.display-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.display-right-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px
+}
+
+.display-name {
+    text-transform: capitalize;
+    color: var(--med-blue);
+    font-size: 30px;
+}
+
+.display-desc {
+    color: var(--dark-blue);
+    font-size:18px;
+}
+
+.display-buttons-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    column-gap: 3%;
+    margin: 5% 0 0 0;
+}
+
+.display-buttons-div > div {
+    flex: 1;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--med-blue);
+    transition: color .3s ease-out;
+}
+
+.site-btn-wrapper svg, .github-btn-wrapper svg {
+    fill: var(--med-blue);
+    transition: fill .3s ease-out;
+}
+
+.display-buttons-div > div:hover {
+    color: var(--cream);
+}
+
+.site-btn-wrapper:hover svg, .github-btn-wrapper:hover svg {
+    fill: var(--cream);
+}
+
+.site-btn-wrapper::before, .github-btn-wrapper::before {
+    content: '';
+    background-color: var(--red);
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    transition: height .3s ease-out;
+}
+
+.site-btn-wrapper:hover::before, .github-btn-wrapper:hover::before {
+    height: 100%;
+}
+
+.site-btn-content, .github-btn-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 18px;
+    position: relative;
+}
+
