@@ -2,18 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 // import reportWebVitals from "./reportWebVitals";
-// import { gsap } from "gsap";
-import Nav from "./components/nav/Nav";
-import Header from "./components/header/Header";
-import Work from "./components/work/Work";
+
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Nav />
-    <Header />
-    <div class='spacer'></div>
-    <Work />
+    <App />
   </React.StrictMode>
 );
 
