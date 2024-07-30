@@ -7,20 +7,19 @@ export default function Display({ selected }) {
       <div className='display-left'>
         <div className='left-leaf-bg'></div>
         <div className='left-display-div'>
-          {selected !== null &&
-            (selected.type === 1 ? (
-              <img
-                src={selected.display}
-                style={{ height: "430px", width: "auto" }}
-                alt=''
-              />
-            ) : (
-              <img
-                src={selected.display}
-                style={{ height: "auto", width: "100%" }}
-                alt=''
-              />
-            ))}
+          (selected.type === 1 ? (
+          <img
+            src={selected.display}
+            style={{ height: "430px", width: "auto" }}
+            alt=''
+          />
+          ) : (
+          <img
+            src={selected.display}
+            style={{ height: "auto", width: "100%" }}
+            alt=''
+          />
+          ))
         </div>
       </div>
       <div className='display-right raleway'>
