@@ -1,16 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./work.css";
+import Display from "./Display";
 import { galleryData } from "./gallery-data";
 import Galleryprev from "./Galleryprev";
 import { gsap } from "gsap";
-import Display from "./Display";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function Work() {
   const [workCurr, setWorkCurr] = useState(0);
   const navArr = ["All", "Art", "Web"];
   const navFiller = useRef(null);
   const [galleryFilter, setGalleryFilter] = useState(galleryData);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(galleryData[0]);
+  const displayRef = useRef(null);
 
   useEffect(() => {
     const filter =
@@ -45,19 +48,40 @@ export default function Work() {
     });
   };
 
+  //   & display animate in
   const galleryClick = (e) => {
+    console.log(selected);
     setSelected(e);
+    gsap.to(".left-display-div", { opacity: 0, right: 30, duration: 0 });
+
+    const displayElement = displayRef.current;
+    const dHeight = parseInt(
+      getComputedStyle(displayElement).height.replace("px", "")
+    );
+    const tl = gsap.timeline();
+
+    tl.to(window, {
+      scrollTo: { y: ".work-wrapper", offsetY: 50 },
+      duration: 0.5,
+      ease: "power2.out",
+    });
+    if (dHeight === 0) {
+      tl.to(displayElement, {
+        height: "auto",
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    }
+    tl.to(".left-display-div", { opacity: 1, right: 0 }, "<.5");
   };
 
   return (
-    <div className='work-wrapper'>
+    <div className='work-wrapper' id='work-wrapper'>
       <div className='work-content'>
         {/* Header */}
-        <div className='work-header-nav'>
-          <div className='work-header subheader'>work</div>
-        </div>
+        <div className='work-header subheader'>work</div>
         {/* display showcase */}
-        <Display selected={selected} />
+        <Display selected={selected} displayRef={displayRef} />
         {/* work nav */}
         <div className='work-nav'>
           <div className='work-nav-filler' ref={navFiller}></div>
