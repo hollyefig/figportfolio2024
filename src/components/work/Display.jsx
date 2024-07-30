@@ -8,6 +8,7 @@ export default function Display({ selected, displayRef }) {
           <div className='display-left'>
             <div className='left-leaf-bg'></div>
             <div className='left-display-div'>
+              {/* if display type is art */}
               {selected.type === 1 ? (
                 <img
                   src={selected.display}
@@ -15,6 +16,7 @@ export default function Display({ selected, displayRef }) {
                   alt=''
                 />
               ) : (
+                // if display type is web
                 <img
                   src={selected.display}
                   style={{ height: "auto", maxWidth: "520px", width: "100%" }}
@@ -27,6 +29,11 @@ export default function Display({ selected, displayRef }) {
             <div className='display-right-content'>
               <div className='display-name font-bold'>{selected.name}</div>
               <div className='display-desc font-regular'>{selected.desc}</div>
+              <div className='display-tools font-bold'>
+                {selected.tools.map((e, index) => (
+                  <div datatype={`tools-${index}`}>{e}</div>
+                ))}
+              </div>
               {/* butttons if apply */}
               {selected.type === 2 && (
                 <div className='display-buttons-div'>

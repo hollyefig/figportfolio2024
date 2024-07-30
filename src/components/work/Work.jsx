@@ -50,15 +50,21 @@ export default function Work() {
 
   //   & display animate in
   const galleryClick = (e) => {
-    console.log(selected);
-    setSelected(e);
-    gsap.to(".left-display-div", { opacity: 0, right: 30, duration: 0 });
-
+    const tl = gsap.timeline();
     const displayElement = displayRef.current;
     const dHeight = parseInt(
       getComputedStyle(displayElement).height.replace("px", "")
     );
-    const tl = gsap.timeline();
+
+    tl.to(".left-display-div", { opacity: 0, duration: 0.3 })
+      .to(".display-right-content", { opacity: 0, duration: 0.3 }, "<")
+      .add(() => setSelected(e))
+      .to(".left-display-div", { opacity: 0, right: 30, duration: 0 })
+      .to(
+        ".display-right-content",
+        { opacity: 0, right: 30, duration: 0 },
+        "<"
+      );
 
     tl.to(window, {
       scrollTo: { y: ".work-wrapper", offsetY: 50 },
@@ -73,6 +79,7 @@ export default function Work() {
       });
     }
     tl.to(".left-display-div", { opacity: 1, right: 0 }, "<.5");
+    tl.to(".display-right-content", { opacity: 1, right: 0 }, "<");
   };
 
   return (

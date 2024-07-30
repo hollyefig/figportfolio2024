@@ -150,7 +150,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    row-gap: 7px
+    row-gap: 25px;
 }
 
 .display-name {
@@ -162,6 +162,26 @@
 .display-desc {
     color: var(--dark-blue);
     font-size:18px;
+}
+
+.display-tools {
+    font-size: 10px;
+    color: var(--dark-blue);
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 6px;
+}
+
+.display-tools > div {
+    border:2px solid var(--dark-blue);
+    padding:3px 5px;
+    border-radius: 100em;
+    cursor:default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .display-buttons-div {
