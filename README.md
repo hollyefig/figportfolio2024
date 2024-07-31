@@ -9,3 +9,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Gsap - Animation plugin using JS
 
 Figma - Design and prototyping
+
+React Swipeable
