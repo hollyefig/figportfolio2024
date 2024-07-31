@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 
 export default function Display({ selected, displayRef }) {
   const [sliderCurr, setSliderCurr] = useState(0);
 
-  const galleryArrow = (e, dir) => {
+  // & gallery directional select
+  const galleryArrow = (dir) => {
     const tl = gsap.timeline({
       defaults: { duration: 0.3, delay: 0, ease: "power2.out" },
     });
@@ -52,7 +53,7 @@ export default function Display({ selected, displayRef }) {
                       <div className='slider-outer-frame'>
                         <div
                           className='slider-btn-left'
-                          onClick={() => galleryArrow(selected, "left")}
+                          onClick={() => galleryArrow("left")}
                         >
                           <svg
                             width='21'
@@ -76,7 +77,7 @@ export default function Display({ selected, displayRef }) {
                         />
                         <div
                           className='slider-btn-right'
-                          onClick={() => galleryArrow(selected, "right")}
+                          onClick={() => galleryArrow("right")}
                         >
                           <svg
                             width='21'
