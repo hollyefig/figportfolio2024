@@ -1,6 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import { gsap } from "gsap";
 
 export default function Display({ selected, displayRef }) {
+  const [sliderCurr, setSliderCurr] = useState(0);
+
+  const galleryArrow = (e, dir) => {
+    const tl = gsap.timeline({
+      defaults: { duration: 0.3, delay: 0, ease: "power2.out" },
+    });
+    if (dir === "right") {
+      if (selected.display.length - 1 !== sliderCurr) {
+        tl.to("#galleryImg", { x: -20, opacity: 0 })
+          .add(() => setSliderCurr((prev) => prev + 1))
+          .to("#galleryImg", { x: 20 })
+          .to("#galleryImg", { x: 0 })
+          .to("#galleryImg", { opacity: 1 }, "<");
+      }
+    }
+    if (dir === "left") {
+      if (0 !== sliderCurr) {
+        tl.to("#galleryImg", { x: 20, opacity: 0 })
+          .add(() => setSliderCurr((prev) => prev - 1))
+          .to("#galleryImg", { x: -20 })
+          .to("#galleryImg", { x: 0 })
+          .to("#galleryImg", { opacity: 1 }, "<");
+      }
+    }
+  };
+
   return (
     <div className='display-wrapper' ref={displayRef}>
       {selected !== null && (
@@ -10,11 +37,73 @@ export default function Display({ selected, displayRef }) {
             <div className='left-display-div'>
               {/* if display type is art */}
               {selected.type === 1 ? (
-                <img
-                  src={selected.display}
-                  style={{ height: "430px", width: "auto" }}
-                  alt=''
-                />
+                // for single img showcase
+                <>
+                  {selected.display.length <= 1 ? (
+                    <img
+                      src={selected.display}
+                      style={{ height: "430px", width: "auto" }}
+                      alt=''
+                      className='mobileResizeImg'
+                    />
+                  ) : (
+                    // mutliple image showcase
+                    <>
+                      <div className='slider-outer-frame'>
+                        <div
+                          className='slider-btn-left'
+                          onClick={() => galleryArrow(selected, "left")}
+                        >
+                          <svg
+                            width='21'
+                            height='16'
+                            viewBox='0 0 21 16'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'
+                          >
+                            <path
+                              d='M19.5 9.05882C20.0848 9.05882 20.5588 8.58477 20.5588 8C20.5588 7.41523 20.0848 6.94118 19.5 6.94118V9.05882ZM0.751299 7.2513C0.337802 7.6648 0.337802 8.3352 0.751299 8.7487L7.48961 15.487C7.90311 15.9005 8.57352 15.9005 8.98701 15.487C9.40051 15.0735 9.40051 14.4031 8.98701 13.9896L2.9974 8L8.98701 2.01039C9.40051 1.59689 9.40051 0.926484 8.98701 0.512987C8.57352 0.0994912 7.90311 0.0994912 7.48961 0.512987L0.751299 7.2513ZM19.5 6.94118L1.5 6.94118V9.05882L19.5 9.05882V6.94118Z'
+                              fill='#F1FAEE'
+                            />
+                          </svg>
+                        </div>
+                        <img
+                          src={selected.display[sliderCurr]}
+                          style={{ height: "430px", width: "auto" }}
+                          alt=''
+                          className='mobileResizeImg'
+                          id='galleryImg'
+                        />
+                        <div
+                          className='slider-btn-right'
+                          onClick={() => galleryArrow(selected, "right")}
+                        >
+                          <svg
+                            width='21'
+                            height='16'
+                            viewBox='0 0 21 16'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'
+                          >
+                            <path
+                              d='M1.5 9.05882C0.915228 9.05882 0.441177 8.58477 0.441177 8C0.441177 7.41523 0.915228 6.94118 1.5 6.94118L1.5 9.05882ZM20.2487 7.2513C20.6622 7.6648 20.6622 8.3352 20.2487 8.7487L13.5104 15.487C13.0969 15.9005 12.4265 15.9005 12.013 15.487C11.5995 15.0735 11.5995 14.4031 12.013 13.9896L18.0026 8L12.013 2.01039C11.5995 1.59689 11.5995 0.926484 12.013 0.512987C12.4265 0.0994912 13.0969 0.0994912 13.5104 0.512987L20.2487 7.2513ZM1.5 6.94118L19.5 6.94118V9.05882L1.5 9.05882L1.5 6.94118Z'
+                              fill='#F1FAEE'
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className='slider-prog'>
+                        {selected.display.map((e, index) => (
+                          <div
+                            className={
+                              index === sliderCurr ? `slider-current` : ""
+                            }
+                          ></div>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </>
               ) : (
                 // if display type is web
                 <img

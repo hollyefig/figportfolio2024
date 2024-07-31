@@ -14,7 +14,9 @@ export default function Work() {
   const [galleryFilter, setGalleryFilter] = useState(galleryData);
   const [selected, setSelected] = useState(galleryData[0]);
   const displayRef = useRef(null);
+  const [navFillW, setNavFillW] = useState();
 
+  //   & organize filter on load
   useEffect(() => {
     const filter =
       workCurr === 0
@@ -23,6 +25,7 @@ export default function Work() {
     setGalleryFilter(filter);
   }, [workCurr]);
 
+  //   ? animate in gallery
   useEffect(() => {
     gsap.to(".gallery-prev-wrapper > div", {
       stagger: 0.2,
@@ -32,10 +35,28 @@ export default function Work() {
     });
   }, [galleryFilter]);
 
+  //  & Nav filler
+  const winResize = () => {
+    setNavFillW(navFiller.current.parentNode.getBoundingClientRect().width / 3);
+  };
+  useEffect(() => {
+    if (navFiller !== null) {
+      setNavFillW(
+        navFiller.current.parentNode.getBoundingClientRect().width / 3
+      );
+    }
+    window.addEventListener("resize", () => winResize());
+    return () => {
+      window.removeEventListener("resize", () => winResize());
+    };
+  }, []);
+
+  //  ?  When work nav is clicked
   const navClick = (e, index) => {
     const parent = Math.floor(
       e.currentTarget.parentNode.getBoundingClientRect().width / 3
     );
+
     const navBg = navFiller.current;
     navBg.style.left = parent * index + "px";
     setWorkCurr(index);
@@ -91,7 +112,11 @@ export default function Work() {
         <Display selected={selected} displayRef={displayRef} />
         {/* work nav */}
         <div className='work-nav'>
-          <div className='work-nav-filler' ref={navFiller}></div>
+          <div
+            className='work-nav-filler'
+            ref={navFiller}
+            style={{ width: `${navFillW}px` }}
+          ></div>
           <div className='work-nav-contents raleway font-bold'>
             {navArr.map((e, index) => (
               <div

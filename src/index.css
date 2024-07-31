@@ -71,3 +71,9 @@ line-height: normal;
 text-transform: uppercase;
 color: var(--dark-blue)
 }
+
+@media only screen and (max-width: 425px) {
+  .spacer {
+    height: 3vh;
+    }
+}

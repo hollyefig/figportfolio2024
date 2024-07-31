@@ -2,6 +2,7 @@ import pokePartyPrev from "../../IMGs/gallery/prevs/pokeparty-prev.jpg";
 import pokePartyDisplay from "../../IMGs/gallery/displays/pokeparty.png";
 import zelinkVectorPrev from "../../IMGs/gallery/prevs/zelink-vector-prev.jpg";
 import zelinkVectorDisplay from "../../IMGs/gallery/displays/zelink-vector.png";
+import zelinkVectorDisplay2 from "../../IMGs/gallery/displays/zelink-vector2024-2.jpg";
 import weatherPrev from "../../IMGs/gallery/prevs/weather-prev.jpg";
 import weatherDisplay from "../../IMGs/gallery/displays/weather.png";
 import aerithPrev from "../../IMGs/gallery/prevs/aerith-prev.jpg";
@@ -35,7 +36,7 @@ export const galleryData = [
     name: "Zelda & Link Vector Illustration",
     type: 1,
     prev: zelinkVectorPrev,
-    display: zelinkVectorDisplay,
+    display: [zelinkVectorDisplay, zelinkVectorDisplay2],
     tools: ["Figma"],
     desc: "desc",
     url: null,
@@ -57,7 +58,7 @@ export const galleryData = [
     name: "Aerith Illustration",
     type: 1,
     prev: aerithPrev,
-    display: aerithDisplay,
+    display: [aerithDisplay],
     tools: ["iPad & Procreate"],
     desc: "desc",
     url: null,
@@ -79,7 +80,7 @@ export const galleryData = [
     name: "Zelda Illustration",
     type: 1,
     prev: zeldaPrev,
-    display: zeldaDisplay,
+    display: [zeldaDisplay],
     tools: ["iPad & Procreate"],
     desc: "desc",
     url: null,
@@ -101,7 +102,7 @@ export const galleryData = [
     name: "Endwalker Illustration",
     type: 1,
     prev: endwalkerPrev,
-    display: endwalkerDisplay,
+    display: [endwalkerDisplay],
     tools: ["iPad & Procreate"],
     desc: "desc",
     url: null,
@@ -123,7 +124,7 @@ export const galleryData = [
     name: "Zelda & Link Illustration",
     type: 1,
     prev: zelinkIllustPrev,
-    display: zelinkIllustDisplay,
+    display: [zelinkIllustDisplay],
     tools: ["iPad & Procreate"],
     desc: "desc",
     url: null,
