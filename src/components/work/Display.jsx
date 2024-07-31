@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { gsap } from "gsap";
+import { useSwipeable } from "react-swipeable";
 
 export default function Display({ selected, displayRef }) {
   const [sliderCurr, setSliderCurr] = useState(0);
@@ -7,7 +8,7 @@ export default function Display({ selected, displayRef }) {
   // & gallery directional select
   const galleryArrow = (dir) => {
     const tl = gsap.timeline({
-      defaults: { duration: 0.3, delay: 0, ease: "power2.out" },
+      defaults: { duration: 0.2, delay: 0, ease: "power2.out" },
     });
     if (dir === "right") {
       if (selected.display.length - 1 !== sliderCurr) {
@@ -28,6 +29,13 @@ export default function Display({ selected, displayRef }) {
       }
     }
   };
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => galleryArrow("right"),
+    onSwipedRight: () => galleryArrow("left"),
+    trackMouse: true,
+    preventDefaultTouchmoveEvent: true,
+  });
 
   return (
     <div className='display-wrapper' ref={displayRef}>
@@ -68,13 +76,16 @@ export default function Display({ selected, displayRef }) {
                             />
                           </svg>
                         </div>
-                        <img
-                          src={selected.display[sliderCurr]}
-                          style={{ height: "430px", width: "auto" }}
-                          alt=''
-                          className='mobileResizeImg'
-                          id='galleryImg'
-                        />
+                        <div className='swipeDiv' {...handlers}>
+                          <img
+                            src={selected.display[sliderCurr]}
+                            style={{ height: "430px", width: "auto" }}
+                            alt=''
+                            className='mobileResizeImg'
+                            id='galleryImg'
+                            draggable='false'
+                          />
+                        </div>
                         <div
                           className='slider-btn-right'
                           onClick={() => galleryArrow("right")}
