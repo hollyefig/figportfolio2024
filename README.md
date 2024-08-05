@@ -6,8 +6,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Gsap - Animation plugin using JS
+<a href="https://gsap.com/">Gsap</a> - Animation plugin using JS
 
 Figma - Design and prototyping
 
-React Swipeable
+<a href="https://commerce.nearform.com/open-source/react-swipeable">React Swipeable</a>

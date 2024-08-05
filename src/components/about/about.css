@@ -1,0 +1,167 @@
+.about-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-outer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, var(--standard-width)) 1fr;
+}
+
+.about-header {
+    padding: 0 0 0 10px;
+}
+
+.about-content {
+    max-width: var(--standard-width);
+    width: 100%;
+}
+
+.about-cols {
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.about-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 10px;
+}
+
+.about-blurb {
+    color: var(--dark-blue);
+    line-height: 29px;
+}
+
+.pdf-btn {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    color: var(--med-blue);
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color .3s ease-out;
+}
+
+.pdf-btn a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.pdf-btn svg {
+    fill: var(--med-blue);
+    transition: fill .3s ease-out;
+}
+
+.pdf-btn:hover {
+    color: var(--cream);
+}
+
+.pdf-btn:hover svg {
+    fill: var(--cream);
+}
+
+.pdf-btn::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--red);
+    position: absolute;
+    z-index: -1;
+    top: 93%;
+    transition: top .3s ease-out;
+}
+
+.pdf-btn:hover::before {
+    top: 0%;
+}
+
+.about-right {
+    flex: 2.5;
+    padding: 35px 0;
+}
+
+.about-outer-right {
+    padding: 35px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-bluebg {
+    --radius: 200px;
+    width: 100%;
+    padding: 10%;
+    background-color: var(--dark-blue);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+
+.outer-right-bluebg {
+    width: 100%;
+    padding: 10%;
+    background-color: var(--dark-blue);
+}
+
+/* & skillset */
+
+.skills-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    color: var(--cream)
+}
+
+@media only screen and (max-width: 1200px) {
+   
+    .about-outer-left, .about-outer-right {
+        width: 0;
+        padding: 0;
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .about-outer-left, .about-outer-right {
+        display: none;
+    }
+
+    .about-header {
+        padding: 0 10px;
+    }
+
+    .about-left {
+        padding: 0 10px;
+    }
+   
+    .about-cols {
+        flex-direction: column;
+    }
+
+    .about-outer {
+        display: flex;
+    }
+   
+    .right-bluebg {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Nav from "./components/nav/Nav";
 import Header from "./components/header/Header";
 import Work from "./components/work/Work";
+import About from "./components/about/About";
 
 function App() {
   const [mob, setMob] = useState(null);
@@ -40,6 +41,7 @@ function App() {
       <Header />
       <div className='spacer'></div>
       <Work />
+      <About />
     </>
   );
 }

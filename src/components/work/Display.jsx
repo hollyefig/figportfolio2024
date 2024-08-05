@@ -30,6 +30,7 @@ export default function Display({ selected, displayRef }) {
     }
   };
 
+  // ? Swipe
   const handlers = useSwipeable({
     onSwipedLeft: () => galleryArrow("right"),
     onSwipedRight: () => galleryArrow("left"),
@@ -56,7 +57,7 @@ export default function Display({ selected, displayRef }) {
                       className='mobileResizeImg'
                     />
                   ) : (
-                    // mutliple image showcase
+                    // & mutliple image showcase
                     <>
                       <div className='slider-outer-frame'>
                         <div
@@ -77,6 +78,7 @@ export default function Display({ selected, displayRef }) {
                           </svg>
                         </div>
                         <div className='swipeDiv' {...handlers}>
+                          {/* & */}
                           <img
                             src={selected.display[sliderCurr]}
                             style={{ height: "430px", width: "auto" }}
