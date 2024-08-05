@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/figportfolio2024/static/css/main.b128ec54.css",
-    "main.js": "/figportfolio2024/static/js/main.343aa328.js",
+    "main.css": "/figportfolio2024/static/css/main.212636f9.css",
+    "main.js": "/figportfolio2024/static/js/main.24255fb1.js",
     "static/media/zelLink-illust.png": "/figportfolio2024/static/media/zelLink-illust.4d496fdf4000c5d2653a.png",
     "static/media/endwalker.png": "/figportfolio2024/static/media/endwalker.0601661fa7509dd0c0ab.png",
     "static/media/aerith.png": "/figportfolio2024/static/media/aerith.f67d9430d984d1a1698f.png",
@@ -25,11 +25,11 @@
     "static/media/self-illust.png": "/figportfolio2024/static/media/self-illust.c1a235a23205cc4c6d80.png",
     "static/media/pokeroster-prev.jpg": "/figportfolio2024/static/media/pokeroster-prev.6e146b21ed53949aa2ff.jpg",
     "index.html": "/figportfolio2024/index.html",
-    "main.b128ec54.css.map": "/figportfolio2024/static/css/main.b128ec54.css.map",
-    "main.343aa328.js.map": "/figportfolio2024/static/js/main.343aa328.js.map"
+    "main.212636f9.css.map": "/figportfolio2024/static/css/main.212636f9.css.map",
+    "main.24255fb1.js.map": "/figportfolio2024/static/js/main.24255fb1.js.map"
   },
   "entrypoints": [
-    "static/css/main.b128ec54.css",
-    "static/js/main.343aa328.js"
+    "static/css/main.212636f9.css",
+    "static/js/main.24255fb1.js"
   ]
 }
