@@ -106,9 +106,9 @@
 }
 
 .right-bluebg {
-    --radius: 200px;
+    --radius: 160px;
     width: 100%;
-    padding: 10%;
+    padding: 6% 0 6% 11%;
     background-color: var(--dark-blue);
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
@@ -125,7 +125,72 @@
 .skills-wrapper {
     display: grid;
     grid-auto-flow: column;
-    color: var(--cream)
+    color: var(--cream);
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7%;
+}
+
+.skills-wrapper > div {
+    width: 100%;
+}
+
+.skill-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 20px 10px 0;
+    border-bottom: 3px solid var(--red);
+}
+
+.skill-svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-svg > svg {
+    width: 60px;
+    aspect-ratio: 1 / 1;
+}
+
+svg.hidden {
+    display: none;
+}
+
+.skill-title {
+    font-size: 22px;
+    line-height:28px;
+}
+
+.skill-list {
+    padding:10px 0;
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+}
+
+.skill-list .list-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.skill-list svg {
+    width: 35px;
+    aspect-ratio: 1 / 1;
+}
+
+.skill-list ul {
+    padding: 0 0 0 50px;
+    color: var(--light-blue);
+    font-size:14px;
+    font-style: italic;
+}
+
+.skill-list ul li {
+    padding: 3px 0;
 }
 
 @media only screen and (max-width: 1200px) {

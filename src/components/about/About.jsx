@@ -16,7 +16,6 @@ export default function About() {
 
   return (
     <div className='about-wrapper'>
-      <Svg />
       <div className='spacer'></div>
       <div className='about-outer'>
         <div className='about-outer-left'></div>
@@ -51,8 +50,37 @@ export default function About() {
             <div className='about-right'>
               <div className='right-bluebg' ref={bluebg}>
                 <div className='skills-wrapper'>
-                  <div className='skills-left'>left</div>
-                  <div className='skills-right'>right</div>
+                  {skillArray.map((e, index) => (
+                    <div id={`skill-${index}`}>
+                      {/* skill header */}
+                      <div className='skill-header'>
+                        <div className='skill-svg'>
+                          <Svg tag={e.id} />
+                        </div>
+                        <div className='skill-title'>{e.title}</div>
+                      </div>
+                      {/* skill list */}
+                      <div className='skill-list'>
+                        {e.list.map((l, index) => (
+                          <div className={`skill-${e.set}-list-${index}`}>
+                            <div className='list-name'>
+                              <div className='list-svg'>
+                                <Svg tag={l.id} />
+                              </div>
+                              <span>{l.name}</span>
+                            </div>
+                            {l.sublist !== null && (
+                              <ul>
+                                {l.sublist.map((s, index) => (
+                                  <li>{s}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
