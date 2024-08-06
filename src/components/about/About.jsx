@@ -3,6 +3,7 @@ import "./about.css";
 import { skillArray } from "./skills";
 import Svg from "../Svg";
 import { gsap } from "gsap";
+import { useSwipeable } from "react-swipeable";
 
 export default function About() {
   const bluebg = useRef(null);
@@ -10,13 +11,21 @@ export default function About() {
   const switchRef = useRef(null);
   const skillsWrapRef = useRef(null);
 
+  //   adjust outer blue bg
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setHeight(bluebg.current.getBoundingClientRect().height + "px");
-    });
-    setHeight(bluebg.current.getBoundingClientRect().height + "px");
+    const updateHeight = () => {
+      if (bluebg.current) {
+        setHeight(bluebg.current.getBoundingClientRect().height + "px");
+      }
+    };
+    window.addEventListener("resize", updateHeight);
+    updateHeight();
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+    };
   }, []);
 
+  //   & clicking skill switch for mobile
   const skillSwitch = (i) => {
     const move = switchRef.current.getBoundingClientRect().width / 2;
     const skillsFrame = skillsWrapRef.current;
@@ -43,6 +52,14 @@ export default function About() {
       );
     }
   };
+
+  // ? Swipe
+  const handlers = useSwipeable({
+    onSwipedLeft: () => skillSwitch(1),
+    onSwipedRight: () => skillSwitch(0),
+    trackMouse: true,
+    preventDefaultTouchmoveEvent: true,
+  });
 
   return (
     <div className='about-wrapper'>
@@ -99,7 +116,11 @@ export default function About() {
                 <div className='skills-frame'>
                   <div className='skills-wrapper' ref={skillsWrapRef}>
                     {skillArray.map((e, index) => (
-                      <div id={`skill-${index}`} key={`skill-${index}`}>
+                      <div
+                        id={`skill-${index}`}
+                        key={`skill-${index}`}
+                        {...handlers}
+                      >
                         {/* skill header */}
                         <div className='skill-header'>
                           <div className='skill-svg'>
