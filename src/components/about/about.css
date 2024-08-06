@@ -108,7 +108,7 @@
 .right-bluebg {
     --radius: 160px;
     width: 100%;
-    padding: 6% 0 6% 11%;
+    padding: 11% 0 11% 11%;
     background-color: var(--dark-blue);
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
@@ -193,6 +193,10 @@ svg.hidden {
     padding: 3px 0;
 }
 
+.skill-switch {
+    display: none;
+}
+
 @media only screen and (max-width: 1200px) {
    
     .about-outer-left, .about-outer-right {
@@ -227,6 +231,78 @@ svg.hidden {
     .right-bluebg {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4vh;
+        justify-content: center;
+        align-items: center;
     }
+
+    .skills-frame {
+        width: 60vw;
+        /* min-height: 45vh; */
+        overflow: hidden;
+        position: relative;
+    }
+
+    .skills-wrapper {
+        justify-content: space-between;
+        grid-template-columns: 60vw 60vw;
+        column-gap: 0;
+        position: relative;
+        right: 0;
+
+    }
+
+    .skill-svg {
+        display: none;
+    }
+
+    .skill-switch {
+        --width: 150px;
+        --height: 50px;
+        display: block;
+        border:2px solid var(--red);
+        overflow: hidden;
+        position: relative;
+        /* padding: 10px; */
+        width: var(--width);
+        border-radius: 100em;
+    }
+
+    .skill-switch-bg {
+        background-color: var(--red);
+        border-radius: 100em;
+        width: calc(var(--width) / 2);
+        aspect-ratio: 1.5 / 1;
+        position: relative;
+    }
+
+    .skill-switch-icons {
+        position: absolute;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .skill-switch-icons > div {
+        --dim: 100%;
+        width: var(--dim);
+        height: var(--dim);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .skill-switch > div svg {
+        width: 100%;
+        height: 30px;
+    }
+
     
 }

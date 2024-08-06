@@ -2,10 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import "./about.css";
 import { skillArray } from "./skills";
 import Svg from "../Svg";
+import { gsap } from "gsap";
 
 export default function About() {
   const bluebg = useRef(null);
   const [height, setHeight] = useState("auto");
+  const switchRef = useRef(null);
+  const skillsWrapRef = useRef(null);
 
   useEffect(() => {
     window.addEventListener("resize", () => {
@@ -13,6 +16,33 @@ export default function About() {
     });
     setHeight(bluebg.current.getBoundingClientRect().height + "px");
   }, []);
+
+  const skillSwitch = (i) => {
+    const move = switchRef.current.getBoundingClientRect().width / 2;
+    const skillsFrame = skillsWrapRef.current;
+    const skillsMove = skillsFrame.getBoundingClientRect().width;
+    const tl = gsap.timeline({
+      defaults: { duration: 0.3, ease: "power2.out" },
+    });
+    if (i >= 1) {
+      tl.to(".skill-switch-bg", { x: move }).to(
+        ".skills-wrapper",
+        {
+          x: -skillsMove,
+        },
+        "<"
+      );
+    } else {
+      console.log("clicked", move);
+      tl.to(".skill-switch-bg", { x: 0 }).to(
+        ".skills-wrapper",
+        {
+          x: 0,
+        },
+        "<"
+      );
+    }
+  };
 
   return (
     <div className='about-wrapper'>
@@ -49,38 +79,61 @@ export default function About() {
             {/* skillsets */}
             <div className='about-right'>
               <div className='right-bluebg' ref={bluebg}>
-                <div className='skills-wrapper'>
-                  {skillArray.map((e, index) => (
-                    <div id={`skill-${index}`}>
-                      {/* skill header */}
-                      <div className='skill-header'>
-                        <div className='skill-svg'>
-                          <Svg tag={e.id} />
-                        </div>
-                        <div className='skill-title'>{e.title}</div>
+                {/* mobile only - skill switch */}
+                <div className='skill-switch' ref={switchRef}>
+                  <div className='skill-switch-bg'></div>
+                  <div className='skill-switch-icons'>
+                    {skillArray.map((e, index) => (
+                      <div
+                        className={`skill-switch-${index}`}
+                        key={`skill-switch-${index}`}
+                        onClick={() => skillSwitch(index)}
+                      >
+                        <Svg tag={skillArray[index].id} />
                       </div>
-                      {/* skill list */}
-                      <div className='skill-list'>
-                        {e.list.map((l, index) => (
-                          <div className={`skill-${e.set}-list-${index}`}>
-                            <div className='list-name'>
-                              <div className='list-svg'>
-                                <Svg tag={l.id} />
-                              </div>
-                              <span>{l.name}</span>
-                            </div>
-                            {l.sublist !== null && (
-                              <ul>
-                                {l.sublist.map((s, index) => (
-                                  <li>{s}</li>
-                                ))}
-                              </ul>
-                            )}
+                    ))}
+                  </div>
+                </div>
+                {/* mobile only - skill switch */}
+                {/* SKILL FRAME */}
+                <div className='skills-frame'>
+                  <div className='skills-wrapper' ref={skillsWrapRef}>
+                    {skillArray.map((e, index) => (
+                      <div id={`skill-${index}`} key={`skill-${index}`}>
+                        {/* skill header */}
+                        <div className='skill-header'>
+                          <div className='skill-svg'>
+                            <Svg tag={e.id} />
                           </div>
-                        ))}
+                          <div className='skill-title'>{e.title}</div>
+                        </div>
+                        {/* skill list */}
+                        <div className='skill-list'>
+                          {e.list.map((l, index) => (
+                            <div
+                              className={`skill-${e.set}-list-${index}`}
+                              key={`skill-${e.set}-list-${index}`}
+                            >
+                              <div className='list-name'>
+                                <div className='list-svg'>
+                                  <Svg tag={l.id} />
+                                </div>
+                                <span>{l.name}</span>
+                              </div>
+                              {l.sublist !== null && (
+                                <ul>
+                                  {l.sublist.map((s, index) => (
+                                    <li key={`sublist-${index}`}>{s}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
+                  {/* end skills frame */}
                 </div>
               </div>
             </div>

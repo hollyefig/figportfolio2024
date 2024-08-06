@@ -3,7 +3,7 @@ import React from "react";
 export default function Svgset() {
   return (
     <>
-      <svg width='0' height='0' class='hidden'>
+      <svg width='0' height='0' className='hidden'>
         {/* paintbrush */}
         <symbol
           id='paintbrush-svg'
