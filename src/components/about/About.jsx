@@ -80,7 +80,9 @@ export default function About() {
                 <a
                   href='/Users/hollyfigenshu/Desktop/Web Work/code/figportfolio2024/src/IMGs/resume2024.pdf'
                   target='_blank'
-                ></a>
+                >
+                  .
+                </a>
                 <span className='font-bold'>view resume pdf</span>
                 <svg
                   width='13'
@@ -114,13 +116,13 @@ export default function About() {
                 {/* mobile only - skill switch */}
                 {/* SKILL FRAME */}
                 <div className='skills-frame'>
-                  <div className='skills-wrapper' ref={skillsWrapRef}>
+                  <div
+                    className='skills-wrapper'
+                    {...handlers}
+                    ref={skillsWrapRef}
+                  >
                     {skillArray.map((e, index) => (
-                      <div
-                        id={`skill-${index}`}
-                        key={`skill-${index}`}
-                        {...handlers}
-                      >
+                      <div id={`skill-${index}`} key={`skill-${index}`}>
                         {/* skill header */}
                         <div className='skill-header'>
                           <div className='skill-svg'>
