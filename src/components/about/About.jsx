@@ -115,12 +115,8 @@ export default function About() {
                 </div>
                 {/* mobile only - skill switch */}
                 {/* SKILL FRAME */}
-                <div className='skills-frame'>
-                  <div
-                    className='skills-wrapper'
-                    {...handlers}
-                    ref={skillsWrapRef}
-                  >
+                <div className='skills-frame' {...handlers}>
+                  <div className='skills-wrapper' ref={skillsWrapRef}>
                     {skillArray.map((e, index) => (
                       <div id={`skill-${index}`} key={`skill-${index}`}>
                         {/* skill header */}
