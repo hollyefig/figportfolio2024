@@ -3,6 +3,7 @@ import Nav from "./components/nav/Nav";
 import Header from "./components/header/Header";
 import Work from "./components/work/Work";
 import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const [mob, setMob] = useState(null);
@@ -42,6 +43,7 @@ function App() {
       <div className='spacer'></div>
       <Work />
       <About />
+      {/* <Contact /> */}
     </>
   );
 }

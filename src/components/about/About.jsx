@@ -4,6 +4,7 @@ import { skillArray } from "./skills";
 import Svg from "../Svg";
 import { gsap } from "gsap";
 import { useSwipeable } from "react-swipeable";
+import resume from "../../IMGs/resume2024.pdf";
 
 export default function About() {
   const bluebg = useRef(null);
@@ -77,10 +78,7 @@ export default function About() {
                 illustration.
               </div>
               <div className='pdf-btn'>
-                <a
-                  href='/Users/hollyfigenshu/Desktop/Web Work/code/figportfolio2024/src/IMGs/resume2024.pdf'
-                  target='_blank'
-                >
+                <a href={resume} target='_blank'>
                   .
                 </a>
                 <span className='font-bold'>view resume pdf</span>
