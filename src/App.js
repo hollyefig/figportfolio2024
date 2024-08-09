@@ -43,7 +43,7 @@ function App() {
       <div className='spacer'></div>
       <Work />
       <About />
-      {/* <Contact /> */}
+      <Contact />
     </>
   );
 }

@@ -1,9 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import "./contact.css";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const formRef = useRef(null);
+  const buttonRef = useRef(null);
+  const gradRef = useRef(null);
 
   const [done, setDone] = useState(false);
 
@@ -12,6 +14,30 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  //   ? Directionally aware func
+  const handleMove = useCallback((e) => {
+    const grad = gradRef.current;
+    const btn = buttonRef.current;
+    if (grad) {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      grad.style.left = `${x - grad.offsetWidth / 2}px`;
+      grad.style.top = `${y - grad.offsetHeight / 2}px`;
+    }
+  }, []);
+
+  // & useEffect
+  useEffect(() => {
+    window.addEventListener("mousemove", handleMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+    };
+  }, [handleMove]);
+
+  //   & on submit
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
@@ -70,7 +96,7 @@ export default function Contact() {
 
               <div className='contact-icon-1'>
                 <a
-                  href='www.linkedin.com/in/holly-figenshu-58165166'
+                  href='https://www.linkedin.com/in/holly-figenshu-58165166'
                   target='_blank'
                 >
                   .
@@ -101,8 +127,8 @@ export default function Contact() {
                   fill='none'
                 >
                   <path
-                    fill-rule='evenodd'
-                    clip-rule='evenodd'
+                    fillRule='evenodd'
+                    clipRule='evenodd'
                     d='M28 48.5C39.8741 48.5 49.5 38.8741 49.5 27C49.5 15.1259 39.8741 5.5 28 5.5C16.1259 5.5 6.5 15.1259 6.5 27C6.5 38.8741 16.1259 48.5 28 48.5ZM18.0709 14.8402C16.48 14.8402 15.0231 15.4141 13.896 16.3661C13.8201 16.4121 13.7486 16.4678 13.6831 16.5333C13.6461 16.5703 13.6123 16.6092 13.5815 16.6497C12.358 17.8274 11.5968 19.482 11.5968 21.3143V32.5331C11.5968 36.1086 14.4954 39.0072 18.0709 39.0072H37.8348C41.4103 39.0072 44.3089 36.1086 44.3089 32.5331V21.3144C44.3089 17.7388 41.4103 14.8402 37.8348 14.8402H18.0709ZM13.8505 21.3143C13.8505 20.4562 14.1067 19.6579 14.5466 18.9917L14.5826 19.0277C17.0525 21.5027 19.273 23.7279 21.2851 25.3772C23.4866 27.1817 25.6717 28.5015 27.8742 28.5222V28.5224L27.9004 28.5223L27.9266 28.5224V28.5222C30.1292 28.5015 32.3143 27.1817 34.5158 25.3772C36.5278 23.728 38.7484 21.5027 41.2183 19.0277L41.3168 18.9289C41.7826 19.6075 42.0552 20.4291 42.0552 21.3144V32.5331C42.0552 34.8639 40.1656 36.7535 37.8348 36.7535H18.0709C15.7401 36.7535 13.8505 34.8639 13.8505 32.5331V21.3143ZM22.7138 23.6342C24.8781 25.4082 26.5347 26.2578 27.9004 26.2686C29.2662 26.2578 30.9228 25.4082 33.0871 23.6342C34.9937 22.0713 37.1134 19.9499 39.5855 17.4731C39.0522 17.2296 38.4593 17.094 37.8348 17.094H18.0709C17.4183 17.094 16.8003 17.2421 16.2487 17.5066C18.7066 19.969 20.8157 22.0784 22.7138 23.6342Z'
                     fill='#E63946'
                   />
@@ -160,6 +186,7 @@ export default function Contact() {
 
                 <div className='contact-submit'>
                   <button
+                    ref={buttonRef}
                     className={`contactSubmit ${
                       name === "" ||
                       email === "" ||
@@ -177,12 +204,12 @@ export default function Contact() {
                         : false
                     }
                   >
-                    <div className='submit-gradient'></div>
-                    Submit
+                    <div className='submit-gradient' ref={gradRef}></div>
+                    <span>Submit</span>
                   </button>
-                  {/* <div className='formMessage'>
+                  <div className='form-message'>
                     {done && "Your message has been sent. Thank you!"}
-                  </div> */}
+                  </div>
                 </div>
               </div>
               {/* END FORM */}

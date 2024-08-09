@@ -1,3 +1,24 @@
+input {
+    background-color: transparent;
+    color: #000; /* Set your desired text color */
+  }
+  
+  input::selection {
+    background: none;
+    color: inherit;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  input:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+  
+
 .contact-wrapper {
     width: 100%;
     display: flex;
@@ -123,6 +144,11 @@
     font-size: 18px;
 }
 
+.contact-inputs input::selection {
+    background: none;
+    color: inherit;
+  }
+
 .contact-inputs textarea {
     width: 100%;
     height: 160px;
@@ -185,8 +211,13 @@ input:focus, textarea:focus {
     position: relative;
   }
 
+  .contact-submit button:disabled {
+    opacity: .4;
+    cursor: default;
+  }
+
   .submit-gradient {
-    --dim: 200px;
+    --dim: 50%;
     width: var(--dim);
     aspect-ratio: 1 / 1;
     position: absolute;
@@ -195,4 +226,40 @@ background: -moz-radial-gradient(circle, rgba(231,129,97,1) 0%, rgba(230,57,70,1
 background: -webkit-radial-gradient(circle, rgba(231,129,97,1) 0%, rgba(230,57,70,1) 70%);
 background: radial-gradient(circle, rgba(231,129,97,1) 0%, rgba(230,57,70,1) 70%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e78161",endColorstr="#e63946",GradientType=1);
+  }
+
+  .contact-submit button span {
+    display: block;
+    position: relative;
+  }
+
+  .form-message {
+    padding: 5px 0 0 0;
+    color: var(--red);
+    font-weight: 600;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left, .contact-right {
+        flex: 1;
+    }
+
+    .contact-left {
+        max-width: 425px;
+        width: 100%;
+    }
+
+    .contact-right {
+        width: 90vw;
+    }
+
+    .contact-inputs {
+        width: 100%;
+    }
   }

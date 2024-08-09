@@ -109,6 +109,7 @@ export default function Display({ selected, displayRef }) {
                       <div className='slider-prog'>
                         {selected.display.map((e, index) => (
                           <div
+                            key={`slider-${index}`}
                             className={
                               index === sliderCurr ? `slider-current` : ""
                             }
@@ -134,7 +135,9 @@ export default function Display({ selected, displayRef }) {
               <div className='display-desc font-regular'>{selected.desc}</div>
               <div className='display-tools font-bold'>
                 {selected.tools.map((e, index) => (
-                  <div datatype={`tools-${index}`}>{e}</div>
+                  <div datatype={`tools-${index}`} key={`tools-${index}`}>
+                    {e}
+                  </div>
                 ))}
               </div>
               {/* butttons if apply */}
