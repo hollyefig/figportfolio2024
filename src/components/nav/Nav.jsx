@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./nav.css";
 
-export default function Nav({ bg, mob }) {
+export default function Nav({ bg, mob, scrollTo }) {
   const navHeightRef = useRef(null);
   const [navHeight, setNavHeight] = useState(0);
 
@@ -25,13 +25,27 @@ export default function Nav({ bg, mob }) {
 
         <div className='nav-content-wrap'>
           <div className='nav-content'>
-            <div id='nav-work' className='raleway font-bold'>
+            <div
+              id='nav-work'
+              className='raleway font-bold'
+              onClick={() => scrollTo("work-wrapper")}
+            >
               work
+              <div className='work-after'></div>
             </div>
-            <div id='nav-about' className='raleway font-bold'>
+            <div
+              id='nav-about'
+              className='raleway font-bold'
+              onClick={() => scrollTo("to-about")}
+            >
               about
+              <div className='about-after'></div>
             </div>
-            <div id='nav-contact' className='raleway font-bold'>
+            <div
+              id='nav-contact'
+              className='raleway font-bold'
+              onClick={() => scrollTo("to-contact")}
+            >
               contact
             </div>
           </div>

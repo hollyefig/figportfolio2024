@@ -63,7 +63,7 @@ export default function About() {
   });
 
   return (
-    <div className='about-wrapper'>
+    <div className='about-wrapper' id='to-about'>
       <div className='spacer'></div>
       <div className='about-outer'>
         <div className='about-outer-left'></div>

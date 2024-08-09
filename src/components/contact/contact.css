@@ -29,6 +29,7 @@ input {
 .contact-content {
     max-width: var(--standard-width);
     width: 100%;
+    padding: 0 10px;
 }
 
 .contact-content .subheader {
@@ -142,6 +143,7 @@ input {
     color: #5D7084;
     font-style: italic;
     font-size: 18px;
+    width: 100%;
 }
 
 .contact-inputs input::selection {

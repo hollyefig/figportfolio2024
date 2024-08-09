@@ -4,8 +4,13 @@ import Header from "./components/header/Header";
 import Work from "./components/work/Work";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
+import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
   const [mob, setMob] = useState(null);
   const [navbg, setNavbg] = useState(false);
 
@@ -30,15 +35,21 @@ function App() {
     win <= 768 ? setMob(true) : setMob(false);
     window.addEventListener("scroll", () => onScroll());
     window.addEventListener("resize", (e) => onResize(e));
+
     return () => {
       window.removeEventListener("scroll", () => onScroll());
       window.removeEventListener("resize", () => onResize());
     };
   }, []);
 
+  // * GSAP scrollTo
+  const scrollTo = (e) => {
+    gsap.to(window, { duration: 1, scrollTo: `#${e}`, ease: "power2.out" });
+  };
+
   return (
     <>
-      <Nav bg={navbg} mob={mob} />
+      <Nav bg={navbg} mob={mob} scrollTo={scrollTo} />
       <Header />
       <div className='spacer'></div>
       <Work />

@@ -58,7 +58,7 @@ export default function Contact() {
       );
   };
   return (
-    <div className='contact-wrapper'>
+    <div className='contact-wrapper' id='to-contact'>
       <div className='spacer'></div>
       <div className='contact-content'>
         <div className='subheader'>Contact</div>
