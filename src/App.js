@@ -44,7 +44,11 @@ function App() {
 
   // * GSAP scrollTo
   const scrollTo = (e) => {
-    gsap.to(window, { duration: 1, scrollTo: `#${e}`, ease: "power2.out" });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: `#${e}`, offsetY: e === "work-wrapper" ? 50 : 25 },
+      ease: "power2.out",
+    });
   };
 
   return (
