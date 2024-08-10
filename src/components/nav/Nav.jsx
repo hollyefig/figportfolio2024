@@ -31,7 +31,6 @@ export default function Nav({ bg, mob, scrollTo }) {
               onClick={() => scrollTo("work-wrapper")}
             >
               work
-              <div className='work-after'></div>
             </div>
             <div
               id='nav-about'
@@ -39,7 +38,6 @@ export default function Nav({ bg, mob, scrollTo }) {
               onClick={() => scrollTo("to-about")}
             >
               about
-              <div className='about-after'></div>
             </div>
             <div
               id='nav-contact'

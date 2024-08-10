@@ -61,7 +61,8 @@
     justify-content: center;
 }
 
-.nav-content > div:not(:last-child) [class*="-after"]{
+.nav-content > div:not(:last-child)::after{
+    content: '';
     width: 0%;
     height: 3px;
     background-color: var(--red);
@@ -70,7 +71,7 @@
     transition: width .2s ease-out;
 }
 
-.nav-content > div:not(:last-child):hover [class*="-after"] {
+.nav-content > div:not(:last-child):hover::after {
     width: 100%;
 }
 

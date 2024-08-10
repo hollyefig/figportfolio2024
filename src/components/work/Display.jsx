@@ -132,7 +132,6 @@ export default function Display({ selected, displayRef }) {
           <div className='display-right raleway'>
             <div className='display-right-content'>
               <div className='display-name font-bold'>{selected.name}</div>
-              <div className='display-desc font-regular'>{selected.desc}</div>
               <div className='display-tools font-bold'>
                 {selected.tools.map((e, index) => (
                   <div datatype={`tools-${index}`} key={`tools-${index}`}>
@@ -140,6 +139,7 @@ export default function Display({ selected, displayRef }) {
                   </div>
                 ))}
               </div>
+              <div className='display-desc font-regular'>{selected.desc}</div>
               {/* butttons if apply */}
               {selected.type === 2 && (
                 <div className='display-buttons-div'>
