@@ -81,7 +81,6 @@ function App() {
       scrollTrigger: {
         trigger: ".contact-icons",
         start: "center bottom",
-        markers: true,
       },
       opacity: 1,
       stagger: 0.4,
