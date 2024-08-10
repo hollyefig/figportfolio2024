@@ -217,6 +217,12 @@ svg.hidden {
     .about-outer-left, .about-outer-right {
         width: 0;
         padding: 0;
+        display: none;
+    }
+    .about-outer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
     }
     
 }
