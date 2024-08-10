@@ -183,6 +183,8 @@
     flex-direction: row;
     justify-content: flex-start;
     column-gap: 6px;
+    flex-wrap: wrap;
+    row-gap: 7px;
 }
 
 .display-tools > div {
