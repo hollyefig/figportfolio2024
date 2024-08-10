@@ -32,8 +32,10 @@ input {
     padding: 0 10px;
 }
 
+/* * ScrollTrigger element */
 .contact-content .subheader {
     color: var(--red)!important;
+    opacity:0;    
 }
 
 .contact-grid {
@@ -41,6 +43,11 @@ input {
     display: flex;
     column-gap: 5%;
     margin: 10vh 0;
+}
+
+/* * ScrollTrigger element */
+.contact-grid > div {
+  opacity: 0;
 }
 
 .contact-left {

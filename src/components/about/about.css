@@ -14,6 +14,9 @@
 
 .about-header {
     padding: 0 0 0 10px;
+    opacity: 0;
+    position: relative;
+    left: 20px;
 }
 
 .about-content {
@@ -27,7 +30,9 @@
     column-gap: 50px;
 }
 
+/* * scrollTrigger element */
 .about-left {
+    opacity: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -97,6 +102,8 @@
 .about-right {
     flex: 2.5;
     padding: 35px 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .about-outer-right {
@@ -106,9 +113,11 @@
     align-items: center;
 }
 
+/* * scrollTrigger element */
 .right-bluebg {
     --radius: 160px;
-    width: 100%;
+    width: 0%;
+    overflow: hidden;
     padding: 11% 0 11% 11%;
     background-color: var(--dark-blue);
     border-top-left-radius: var(--radius);
@@ -134,6 +143,11 @@
 
 .skills-wrapper > div {
     width: 100%;
+}
+
+/* * scrollTrigger element */
+.skills-frame {
+    opacity: 0;
 }
 
 .skill-header {
@@ -232,7 +246,7 @@ svg.hidden {
     .right-bluebg {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        padding: 20px 10px;
+        padding: 20px 0px;
         display: flex;
         flex-direction: column;
         row-gap: 4vh;
@@ -259,8 +273,9 @@ svg.hidden {
     .skill-svg {
         display: none;
     }
-
+/* * scrollTrigger element */
     .skill-switch {
+        opacity: 0;
         --width: 150px;
         --height: 50px;
         display: block;

@@ -10,6 +10,12 @@
     padding:0 10px;
 }
 
+.work-content > div:not(:nth-child(2)) {
+    opacity: 0;
+    position: relative;
+    top: 20px;
+}
+
 /* .work-header {
     margin: 0 0 3% 0;
 } */

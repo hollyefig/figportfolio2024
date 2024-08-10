@@ -42,6 +42,52 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    // work
+    gsap.to(".work-content > div:not(:nth-child(2))", {
+      scrollTrigger: {
+        trigger: ".gallery-prev-wrapper",
+        start: "bottom bottom",
+      },
+      opacity: 1,
+      stagger: 0.2,
+      duration: 0.5,
+      top: 0,
+    });
+
+    // about
+    const tlAbout = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".skills-wrapper",
+        start: "bottom bottom",
+      },
+      defaults: {
+        ease: "power2.out",
+        delay: 0,
+        duration: 0.3,
+      },
+    });
+    tlAbout
+      .to(".about-header", {
+        opacity: 1,
+        left: 0,
+      })
+      .to(".about-left", { opacity: 1 })
+      .to(".right-bluebg", { width: "100%", duration: 1 }, "<")
+      .to(".skills-frame", { opacity: 1 })
+      .to(".skill-switch", { opacity: 1 }, "<");
+
+    gsap.to(".contact-content .subheader, .contact-grid > div", {
+      scrollTrigger: {
+        trigger: ".contact-icons",
+        start: "center bottom",
+        markers: true,
+      },
+      opacity: 1,
+      stagger: 0.4,
+    });
+  }, []);
+
   // * GSAP scrollTo
   const scrollTo = (e) => {
     gsap.to(window, {
