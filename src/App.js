@@ -43,6 +43,12 @@ function App() {
   }, []);
 
   useEffect(() => {
+    let isMob = false;
+
+    if (window.innerWidth <= 425) {
+      isMob = true;
+    }
+
     // work
     gsap.to(".work-content > div:not(:nth-child(2))", {
       scrollTrigger: {
@@ -59,7 +65,7 @@ function App() {
     const tlAbout = gsap.timeline({
       scrollTrigger: {
         trigger: ".skills-wrapper",
-        start: "bottom bottom",
+        start: isMob ? "top bottom" : "bottom bottom",
       },
       defaults: {
         ease: "power2.out",
