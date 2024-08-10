@@ -70,13 +70,13 @@ function App() {
     tlAbout
       .to(".about-header", {
         opacity: 1,
-        left: 0,
       })
       .to(".about-left", { opacity: 1 })
       .to(".right-bluebg", { width: "100%", duration: 1 }, "<")
       .to(".skills-frame", { opacity: 1 })
       .to(".skill-switch", { opacity: 1 }, "<");
 
+    // contact
     gsap.to(".contact-content .subheader, .contact-grid > div", {
       scrollTrigger: {
         trigger: ".contact-icons",
