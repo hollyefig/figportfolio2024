@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/figportfolio2024/static/css/main.8142f602.css",
-    "main.js": "/figportfolio2024/static/js/main.a81d4c70.js",
+    "main.js": "/figportfolio2024/static/js/main.e80e37e8.js",
     "static/media/zelLink-illust.png": "/figportfolio2024/static/media/zelLink-illust.4d496fdf4000c5d2653a.png",
     "static/media/endwalker.png": "/figportfolio2024/static/media/endwalker.0601661fa7509dd0c0ab.png",
     "static/media/aerith.png": "/figportfolio2024/static/media/aerith.f67d9430d984d1a1698f.png",
@@ -27,10 +27,10 @@
     "static/media/pokeroster-prev.jpg": "/figportfolio2024/static/media/pokeroster-prev.6e146b21ed53949aa2ff.jpg",
     "index.html": "/figportfolio2024/index.html",
     "main.8142f602.css.map": "/figportfolio2024/static/css/main.8142f602.css.map",
-    "main.a81d4c70.js.map": "/figportfolio2024/static/js/main.a81d4c70.js.map"
+    "main.e80e37e8.js.map": "/figportfolio2024/static/js/main.e80e37e8.js.map"
   },
   "entrypoints": [
     "static/css/main.8142f602.css",
-    "static/js/main.a81d4c70.js"
+    "static/js/main.e80e37e8.js"
   ]
 }
