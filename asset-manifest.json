@@ -1,12 +1,16 @@
 {
   "files": {
     "main.css": "/figportfolio2024/static/css/main.5165c5aa.css",
-    "main.js": "/figportfolio2024/static/js/main.e80e37e8.js",
+    "main.js": "/figportfolio2024/static/js/main.ad8eb0b4.js",
     "static/media/zelLink-illust.png": "/figportfolio2024/static/media/zelLink-illust.4d496fdf4000c5d2653a.png",
     "static/media/endwalker.png": "/figportfolio2024/static/media/endwalker.0601661fa7509dd0c0ab.png",
+    "static/media/dt-1.png": "/figportfolio2024/static/media/dt-1.aff16a6f043bd90c1d32.png",
     "static/media/aerith.png": "/figportfolio2024/static/media/aerith.f67d9430d984d1a1698f.png",
     "static/media/zeldaEchoes.png": "/figportfolio2024/static/media/zeldaEchoes.484e0146b568668870ad.png",
+    "static/media/dt-2.png": "/figportfolio2024/static/media/dt-2.54c41a51aafeac55dbbe.png",
     "static/media/resume2024.pdf": "/figportfolio2024/static/media/resume2024.cda35f096d83ab457a5c.pdf",
+    "static/media/dt-3.png": "/figportfolio2024/static/media/dt-3.74eb014085f1e009041a.png",
+    "static/media/dt-4.png": "/figportfolio2024/static/media/dt-4.d27bab292adf99ee9809.png",
     "static/media/zelink-vector2024-2.jpg": "/figportfolio2024/static/media/zelink-vector2024-2.6e4436a9b1992a21e851.jpg",
     "static/media/avrovia.png": "/figportfolio2024/static/media/avrovia.8a48507464368099dd84.png",
     "static/media/zelink-illust-prev.jpg": "/figportfolio2024/static/media/zelink-illust-prev.a06feac50e9605e8af61.jpg",
@@ -23,14 +27,15 @@
     "static/media/weather-prev.jpg": "/figportfolio2024/static/media/weather-prev.08377b2b96d820b52368.jpg",
     "static/media/pokeparty-prev.jpg": "/figportfolio2024/static/media/pokeparty-prev.94fa77c5a1258097931d.jpg",
     "static/media/todo-prev.jpg": "/figportfolio2024/static/media/todo-prev.3119d01f5b9e52db468c.jpg",
+    "static/media/dt-prev.png": "/figportfolio2024/static/media/dt-prev.95b85aab9017c8dee977.png",
     "static/media/self-illust.png": "/figportfolio2024/static/media/self-illust.c1a235a23205cc4c6d80.png",
     "static/media/pokeroster-prev.jpg": "/figportfolio2024/static/media/pokeroster-prev.6e146b21ed53949aa2ff.jpg",
     "index.html": "/figportfolio2024/index.html",
     "main.5165c5aa.css.map": "/figportfolio2024/static/css/main.5165c5aa.css.map",
-    "main.e80e37e8.js.map": "/figportfolio2024/static/js/main.e80e37e8.js.map"
+    "main.ad8eb0b4.js.map": "/figportfolio2024/static/js/main.ad8eb0b4.js.map"
   },
   "entrypoints": [
     "static/css/main.5165c5aa.css",
-    "static/js/main.e80e37e8.js"
+    "static/js/main.ad8eb0b4.js"
   ]
 }
