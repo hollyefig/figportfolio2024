@@ -19,6 +19,11 @@ import todoPrev from "../../IMGs/gallery/prevs/todo-prev.jpg";
 import todoDisplay from "../../IMGs/gallery/displays/todo.png";
 import zelinkIllustPrev from "../../IMGs/gallery/prevs/zelink-illust-prev.jpg";
 import zelinkIllustDisplay from "../../IMGs/gallery/displays/zelLink-illust.png";
+import dtPrev from "../../IMGs/gallery/prevs/dt-prev.png";
+import dt1 from "../../IMGs/gallery/displays/dt-1.png";
+import dt2 from "../../IMGs/gallery/displays/dt-2.png";
+import dt3 from "../../IMGs/gallery/displays/dt-3.png";
+import dt4 from "../../IMGs/gallery/displays/dt-4.png";
 
 export const galleryData = [
   {
@@ -53,6 +58,17 @@ export const galleryData = [
     url: "https://hollyefig.github.io/weather/",
     repo: "https://github.com/hollyefig/weather",
     id: "weatherApp",
+  },
+  {
+    name: "Dawntrail",
+    type: 1,
+    prev: dtPrev,
+    display: [dt1, dt2, dt3, dt4],
+    tools: ["iPad & Procreate", "Figma"],
+    desc: "Vector illustrations of my character from Final Fantasy XIV and her outfits worn throughout the Danwtrail expansion. Initially sketched in Procreate, the illustrations were brought into Figma for vectoring. The key features of this art is using a limited 5-color palette for each, as well as a strong emphasis on angles.",
+    url: null,
+    repo: null,
+    id: "dt",
   },
   {
     name: "Aerith Illustration",

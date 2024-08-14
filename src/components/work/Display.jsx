@@ -52,7 +52,7 @@ export default function Display({ selected, displayRef }) {
                   {selected.display.length <= 1 ? (
                     <img
                       src={selected.display}
-                      style={{ height: "430px", width: "auto" }}
+                      style={{ height: "580px", width: "auto" }}
                       alt=''
                       className='mobileResizeImg'
                     />
@@ -81,7 +81,7 @@ export default function Display({ selected, displayRef }) {
                           {/* & */}
                           <img
                             src={selected.display[sliderCurr]}
-                            style={{ height: "430px", width: "auto" }}
+                            style={{ height: "580px", width: "auto" }}
                             alt=''
                             className='mobileResizeImg'
                             id='galleryImg'
