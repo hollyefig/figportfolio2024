@@ -24,6 +24,8 @@ import dt1 from "../../IMGs/gallery/displays/dt-1.png";
 import dt2 from "../../IMGs/gallery/displays/dt-2.png";
 import dt3 from "../../IMGs/gallery/displays/dt-3.png";
 import dt4 from "../../IMGs/gallery/displays/dt-4.png";
+import rdmPrev from "../../IMGs/gallery/prevs/rdm-prev.jpg";
+import rdm from "../../IMGs/gallery/displays/rdm.png";
 
 export const galleryData = [
   {
@@ -69,6 +71,17 @@ export const galleryData = [
     url: null,
     repo: null,
     id: "dt",
+  },
+  {
+    name: "Red Mage",
+    type: 1,
+    prev: rdmPrev,
+    display: [rdm],
+    tools: ["iPad & Procreate"],
+    desc: "My player character from Final Fantasy XIV as the Red Mage class. I approached this coloring a little differently from my usual style, and emphasized a limited palette of varying reds and forest greens, with small spots of black and a muted skin tone.",
+    url: null,
+    repo: null,
+    id: "rdmIllust",
   },
   {
     name: "Aerith Illustration",
