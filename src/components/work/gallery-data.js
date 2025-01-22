@@ -26,6 +26,11 @@ import dt3 from "../../IMGs/gallery/displays/dt-3.png";
 import dt4 from "../../IMGs/gallery/displays/dt-4.png";
 import rdmPrev from "../../IMGs/gallery/prevs/rdm-prev.jpg";
 import rdm from "../../IMGs/gallery/displays/rdm.png";
+import wolCardPrev from "../../IMGs/gallery/prevs/wol-card-prev.jpg";
+import rdmCard from "../../IMGs/gallery/displays/rdm-card-set.png";
+import whmCard from "../../IMGs/gallery/displays/whm-card-set.png";
+import warCard from "../../IMGs/gallery/displays/war-card-set.png";
+import astCard from "../../IMGs/gallery/displays/ast-card-set.png";
 
 export const galleryData = [
   {
@@ -82,6 +87,17 @@ export const galleryData = [
     url: null,
     repo: null,
     id: "rdmIllust",
+  },
+  {
+    name: "Warrior of Light Cards",
+    type: 1,
+    prev: wolCardPrev,
+    display: [rdmCard, whmCard, warCard, astCard],
+    tools: ["iPad & Procreate", "Figma"],
+    desc: "My player character from Final Fantasy XIV in the many fighter classes that she plays. Each card uses a 5-color palette, with a strong focus on 1 definitive color per card. The characters were illustrated in Procreate, then brought into Figma for vectoring.",
+    url: null,
+    repo: null,
+    id: "wolCards",
   },
   {
     name: "Aerith Illustration",
