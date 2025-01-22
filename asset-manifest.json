@@ -1,7 +1,11 @@
 {
   "files": {
     "main.css": "/figportfolio2024/static/css/main.5165c5aa.css",
-    "main.js": "/figportfolio2024/static/js/main.f06ec7a0.js",
+    "main.js": "/figportfolio2024/static/js/main.f03d35fe.js",
+    "static/media/war-card-set.png": "/figportfolio2024/static/media/war-card-set.ad64842ae7c17948cfc1.png",
+    "static/media/rdm-card-set.png": "/figportfolio2024/static/media/rdm-card-set.b2d0797ef0ee1b686e22.png",
+    "static/media/ast-card-set.png": "/figportfolio2024/static/media/ast-card-set.f5c2d5fe27c71b49c341.png",
+    "static/media/whm-card-set.png": "/figportfolio2024/static/media/whm-card-set.6e6a82f7090356a68e99.png",
     "static/media/zelLink-illust.png": "/figportfolio2024/static/media/zelLink-illust.4d496fdf4000c5d2653a.png",
     "static/media/endwalker.png": "/figportfolio2024/static/media/endwalker.0601661fa7509dd0c0ab.png",
     "static/media/dt-1.png": "/figportfolio2024/static/media/dt-1.aff16a6f043bd90c1d32.png",
@@ -16,6 +20,7 @@
     "static/media/avrovia.png": "/figportfolio2024/static/media/avrovia.8a48507464368099dd84.png",
     "static/media/zelink-illust-prev.jpg": "/figportfolio2024/static/media/zelink-illust-prev.a06feac50e9605e8af61.jpg",
     "static/media/pokeparty.png": "/figportfolio2024/static/media/pokeparty.8857672b65da162babe1.png",
+    "static/media/wol-card-prev.jpg": "/figportfolio2024/static/media/wol-card-prev.aae6cb9fa254e2dccc67.jpg",
     "static/media/rdm-prev.jpg": "/figportfolio2024/static/media/rdm-prev.2f0778c64a4af659b116.jpg",
     "static/media/endwalker-prev.jpg": "/figportfolio2024/static/media/endwalker-prev.64c96aee03eb8804e8d7.jpg",
     "static/media/zeldaEchoes-prev.jpg": "/figportfolio2024/static/media/zeldaEchoes-prev.a97978586015eb9ac7b7.jpg",
@@ -34,10 +39,10 @@
     "static/media/pokeroster-prev.jpg": "/figportfolio2024/static/media/pokeroster-prev.6e146b21ed53949aa2ff.jpg",
     "index.html": "/figportfolio2024/index.html",
     "main.5165c5aa.css.map": "/figportfolio2024/static/css/main.5165c5aa.css.map",
-    "main.f06ec7a0.js.map": "/figportfolio2024/static/js/main.f06ec7a0.js.map"
+    "main.f03d35fe.js.map": "/figportfolio2024/static/js/main.f03d35fe.js.map"
   },
   "entrypoints": [
     "static/css/main.5165c5aa.css",
-    "static/js/main.f06ec7a0.js"
+    "static/js/main.f03d35fe.js"
   ]
 }
