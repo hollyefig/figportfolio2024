@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/figportfolio2024/static/css/main.5165c5aa.css",
-    "main.js": "/figportfolio2024/static/js/main.f03d35fe.js",
+    "main.js": "/figportfolio2024/static/js/main.cd132e78.js",
     "static/media/war-card-set.png": "/figportfolio2024/static/media/war-card-set.ad64842ae7c17948cfc1.png",
     "static/media/rdm-card-set.png": "/figportfolio2024/static/media/rdm-card-set.b2d0797ef0ee1b686e22.png",
     "static/media/ast-card-set.png": "/figportfolio2024/static/media/ast-card-set.f5c2d5fe27c71b49c341.png",
@@ -15,6 +15,7 @@
     "static/media/rdm.png": "/figportfolio2024/static/media/rdm.7dc907310a63acf92e10.png",
     "static/media/resume2024.pdf": "/figportfolio2024/static/media/resume2024.cda35f096d83ab457a5c.pdf",
     "static/media/dt-3.png": "/figportfolio2024/static/media/dt-3.74eb014085f1e009041a.png",
+    "static/media/card-set-sketches.png": "/figportfolio2024/static/media/card-set-sketches.152368aa9781249f30f9.png",
     "static/media/dt-4.png": "/figportfolio2024/static/media/dt-4.d27bab292adf99ee9809.png",
     "static/media/zelink-vector2024-2.jpg": "/figportfolio2024/static/media/zelink-vector2024-2.6e4436a9b1992a21e851.jpg",
     "static/media/avrovia.png": "/figportfolio2024/static/media/avrovia.8a48507464368099dd84.png",
@@ -39,10 +40,10 @@
     "static/media/pokeroster-prev.jpg": "/figportfolio2024/static/media/pokeroster-prev.6e146b21ed53949aa2ff.jpg",
     "index.html": "/figportfolio2024/index.html",
     "main.5165c5aa.css.map": "/figportfolio2024/static/css/main.5165c5aa.css.map",
-    "main.f03d35fe.js.map": "/figportfolio2024/static/js/main.f03d35fe.js.map"
+    "main.cd132e78.js.map": "/figportfolio2024/static/js/main.cd132e78.js.map"
   },
   "entrypoints": [
     "static/css/main.5165c5aa.css",
-    "static/js/main.f03d35fe.js"
+    "static/js/main.cd132e78.js"
   ]
 }
