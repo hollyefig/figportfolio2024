@@ -31,6 +31,7 @@ import rdmCard from "../../IMGs/gallery/displays/rdm-card-set.png";
 import whmCard from "../../IMGs/gallery/displays/whm-card-set.png";
 import warCard from "../../IMGs/gallery/displays/war-card-set.png";
 import astCard from "../../IMGs/gallery/displays/ast-card-set.png";
+import cardSetSketches from "../../IMGs/gallery/displays/card-set-sketches.png";
 
 export const galleryData = [
   {
@@ -92,7 +93,7 @@ export const galleryData = [
     name: "Warrior of Light Cards",
     type: 1,
     prev: wolCardPrev,
-    display: [rdmCard, whmCard, warCard, astCard],
+    display: [rdmCard, whmCard, warCard, astCard, cardSetSketches],
     tools: ["iPad & Procreate", "Figma"],
     desc: "My player character from Final Fantasy XIV in the many fighter classes that she plays. Each card uses a 5-color palette, with a strong focus on 1 definitive color per card. The characters were illustrated in Procreate, then brought into Figma for vectoring.",
     url: null,
