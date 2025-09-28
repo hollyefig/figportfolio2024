@@ -1,3 +1,13 @@
+// import aerithPrev from "../../IMGs/gallery/prevs/aerith-prev.jpg";
+// import aerithDisplay from "../../IMGs/gallery/displays/aerith.png";
+// import rdmPrev from "../../IMGs/gallery/prevs/rdm-prev.jpg";
+// import rdm from "../../IMGs/gallery/displays/rdm.png";
+// import zeldaPrev from "../../IMGs/gallery/prevs/zeldaEchoes-prev.jpg";
+// import zeldaDisplay from "../../IMGs/gallery/displays/zeldaEchoes.png";
+// import zelinkIllustPrev from "../../IMGs/gallery/prevs/zelink-illust-prev.jpg";
+// import zelinkIllustDisplay from "../../IMGs/gallery/displays/zelLink-illust.png";
+// import endwalkerPrev from "../../IMGs/gallery/prevs/endwalker-prev.jpg";
+// import endwalkerDisplay from "../../IMGs/gallery/displays/endwalker.png";
 import pokePartyPrev from "../../IMGs/gallery/prevs/pokeparty-prev.jpg";
 import pokePartyDisplay from "../../IMGs/gallery/displays/pokeparty.png";
 import zelinkVectorPrev from "../../IMGs/gallery/prevs/zelink-vector-prev.jpg";
@@ -5,33 +15,32 @@ import zelinkVectorDisplay from "../../IMGs/gallery/displays/zelink-vector.png";
 import zelinkVectorDisplay2 from "../../IMGs/gallery/displays/zelink-vector2024-2.jpg";
 import weatherPrev from "../../IMGs/gallery/prevs/weather-prev.jpg";
 import weatherDisplay from "../../IMGs/gallery/displays/weather.png";
-import aerithPrev from "../../IMGs/gallery/prevs/aerith-prev.jpg";
-import aerithDisplay from "../../IMGs/gallery/displays/aerith.png";
 import avroviaPrev from "../../IMGs/gallery/prevs/avrovia-prev.jpg";
 import avroviaDisplay from "../../IMGs/gallery/displays/avrovia.png";
-import zeldaPrev from "../../IMGs/gallery/prevs/zeldaEchoes-prev.jpg";
-import zeldaDisplay from "../../IMGs/gallery/displays/zeldaEchoes.png";
 import pokeRosterPrev from "../../IMGs/gallery/prevs/pokeroster-prev.jpg";
 import pokeRosterDisplay from "../../IMGs/gallery/displays/pokeroster.png";
-import endwalkerPrev from "../../IMGs/gallery/prevs/endwalker-prev.jpg";
-import endwalkerDisplay from "../../IMGs/gallery/displays/endwalker.png";
 import todoPrev from "../../IMGs/gallery/prevs/todo-prev.jpg";
 import todoDisplay from "../../IMGs/gallery/displays/todo.png";
-import zelinkIllustPrev from "../../IMGs/gallery/prevs/zelink-illust-prev.jpg";
-import zelinkIllustDisplay from "../../IMGs/gallery/displays/zelLink-illust.png";
 import dtPrev from "../../IMGs/gallery/prevs/dt-prev.png";
 import dt1 from "../../IMGs/gallery/displays/dt-1.png";
 import dt2 from "../../IMGs/gallery/displays/dt-2.png";
 import dt3 from "../../IMGs/gallery/displays/dt-3.png";
 import dt4 from "../../IMGs/gallery/displays/dt-4.png";
-import rdmPrev from "../../IMGs/gallery/prevs/rdm-prev.jpg";
-import rdm from "../../IMGs/gallery/displays/rdm.png";
 import wolCardPrev from "../../IMGs/gallery/prevs/wol-card-prev.jpg";
 import rdmCard from "../../IMGs/gallery/displays/rdm-card-set.png";
 import whmCard from "../../IMGs/gallery/displays/whm-card-set.png";
 import warCard from "../../IMGs/gallery/displays/war-card-set.png";
 import astCard from "../../IMGs/gallery/displays/ast-card-set.png";
 import cardSetSketches from "../../IMGs/gallery/displays/card-set-sketches.png";
+import whm2025Prev from "../../IMGs/gallery/prevs/whm-2025-prev.jpg";
+import whm20251 from "../../IMGs/gallery/displays/whm-2025-1.jpg";
+import whm20252 from "../../IMGs/gallery/displays/whm-2025-2.jpg";
+import witchPrev from "../../IMGs/gallery/prevs/witch-prev.jpg";
+import witch from "../../IMGs/gallery/displays/witch.jpg";
+import zelinkAccordionPrev from "../../IMGs/gallery/prevs/zelink-accordion-prev.jpg";
+import zelinkAccordion from "../../IMGs/gallery/displays/zelink-accordion.jpg";
+import silksongPrev from "../../IMGs/gallery/prevs/silksong-prev.jpg";
+import silksong from "../../IMGs/gallery/displays/silksong.jpg";
 
 export const galleryData = [
   {
@@ -79,15 +88,15 @@ export const galleryData = [
     id: "dt",
   },
   {
-    name: "Red Mage",
+    name: "White Mage",
     type: 1,
-    prev: rdmPrev,
-    display: [rdm],
+    prev: whm2025Prev,
+    display: [whm20251, whm20252],
     tools: ["iPad & Procreate"],
-    desc: "My player character from Final Fantasy XIV as the Red Mage class. I approached this coloring a little differently from my usual style, and emphasized a limited palette of varying reds and forest greens, with small spots of black and a muted skin tone.",
+    desc: "My player character from Final Fantasy XIV as the Red Mage class. I really enjoy creating a composition where the main character is breaking out of their background a bit to give extra focus on them. I also wanted to try and use at little color variety as possible to challenge myself in creating an interesting visual on strong values.",
     url: null,
     repo: null,
-    id: "rdmIllust",
+    id: "whm2025",
   },
   {
     name: "Warrior of Light Cards",
@@ -101,15 +110,15 @@ export const galleryData = [
     id: "wolCards",
   },
   {
-    name: "Aerith Illustration",
+    name: "Witch Illustration",
     type: 1,
-    prev: aerithPrev,
-    display: [aerithDisplay],
+    prev: witchPrev,
+    display: [witch],
     tools: ["iPad & Procreate"],
-    desc: "An illustration of Aerith, a beloved character from one of my favorite video games. I wanted the piece to feel as though the figure felt flat and 2-dimensional to try and showcase a neat structure.",
+    desc: "This piece was a Draw This In Your Style challenge, originating from @haneul_artbox on Instagram. The fun, yet simple character design with an appealing color pallete really drew me into creating this. The background was a great challenge in creating layered leaves and using value to make them slowly disappear into the background.",
     url: null,
     repo: null,
-    id: "aerithIllust",
+    id: "witch",
   },
   {
     name: "Avrovia - DnD Podcast Site",
@@ -130,13 +139,13 @@ export const galleryData = [
   {
     name: "Zelda Illustration",
     type: 1,
-    prev: zeldaPrev,
-    display: [zeldaDisplay],
+    prev: zelinkAccordionPrev,
+    display: [zelinkAccordion],
     tools: ["iPad & Procreate"],
-    desc: "An illustration of the design for Princess Zelda in Legend of Zelda: Echoes of Wisdom.",
+    desc: "The Legend of Zelda is one of my favorite video game franchises, and I really loved the variety of outfits given to Zelda and Link. One of those outfit sets are the Royal uniforms that showcase great design and sophistication. For this piece, I took great inspiration from J.C. Leyendecker's style of brush strokes to create the texture of the painting.",
     url: null,
     repo: null,
-    id: "zeldaEchoes",
+    id: "zelinkAccordion",
   },
   {
     name: "Pokemon Roster Builder Site",
@@ -150,15 +159,15 @@ export const galleryData = [
     id: "pokeRoster",
   },
   {
-    name: "Endwalker Illustration",
+    name: "Silksong Illustration",
     type: 1,
-    prev: endwalkerPrev,
-    display: [endwalkerDisplay],
+    prev: silksongPrev,
+    display: [silksong],
     tools: ["iPad & Procreate"],
-    desc: "An illustration create to commemorate Final Fantasy XIV's 4th expansion, Endwalker. Featured in the illustration is a single character with her 2 forms on display. The illustration was great practice in creating figures that melt into the black shadow of the background.",
+    desc: "I've always been a huge fan of Metroidvania-type video games, and Hollow Knight: Silksong is one of my top favorites. Using complimentary colors, the background is various shades of green with some key characters blending in as part of it, while the main star of the game stands out strongly in red, up front with strong lighting hitting her.",
     url: null,
     repo: null,
-    id: "endwalker",
+    id: "silksong",
   },
   {
     name: "To-Do List Site",
@@ -170,16 +179,5 @@ export const galleryData = [
     url: "https://hollyefig.github.io/todolist/",
     repo: "https://github.com/hollyefig/todolist",
     id: "todo",
-  },
-  {
-    name: "Zelda & Link Illustration",
-    type: 1,
-    prev: zelinkIllustPrev,
-    display: [zelinkIllustDisplay],
-    tools: ["iPad & Procreate"],
-    desc: "An illustration of my 2 beloved video game characters, Link & Zelda. The illustration emphasizes a limited color palette and light, almost cel-like shading.",
-    url: null,
-    repo: null,
-    id: "zelinkIllust",
   },
 ];
