@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { gsap } from "gsap";
 import { useSwipeable } from "react-swipeable";
 
-export default function Display({ selected, displayRef }) {
-  const [sliderCurr, setSliderCurr] = useState(0);
-
+export default function Display({
+  selected,
+  displayRef,
+  sliderCurr,
+  setSliderCurr,
+}) {
   // & gallery directional select
   const galleryArrow = (dir) => {
     const tl = gsap.timeline({

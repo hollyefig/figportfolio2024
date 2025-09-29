@@ -15,6 +15,7 @@ export default function Work() {
   const [selected, setSelected] = useState(galleryData[0]);
   const displayRef = useRef(null);
   const [navFillW, setNavFillW] = useState();
+  const [sliderCurr, setSliderCurr] = useState(0);
 
   //   & organize filter on load
   useEffect(() => {
@@ -71,6 +72,7 @@ export default function Work() {
 
   //   & display animate in
   const galleryClick = (e) => {
+    setSliderCurr(0);
     const tl = gsap.timeline();
     const displayElement = displayRef.current;
     const dHeight = parseInt(
@@ -109,7 +111,12 @@ export default function Work() {
         {/* Header */}
         <div className='work-header subheader'>work</div>
         {/* display showcase */}
-        <Display selected={selected} displayRef={displayRef} />
+        <Display
+          selected={selected}
+          displayRef={displayRef}
+          sliderCurr={sliderCurr}
+          setSliderCurr={setSliderCurr}
+        />
         {/* work nav */}
         <div className='work-nav'>
           <div
