@@ -93,7 +93,7 @@ export const galleryData = [
     prev: whm2025Prev,
     display: [whm20251, whm20252],
     tools: ["iPad & Procreate"],
-    desc: "My player character from Final Fantasy XIV as the Red Mage class. I really enjoy creating a composition where the main character is breaking out of their background a bit to give extra focus on them. I also wanted to try and use at little color variety as possible to challenge myself in creating an interesting visual on strong values.",
+    desc: "My player character from Final Fantasy XIV as the White Mage class. I really enjoy creating a composition where the main character is breaking out of their background a bit to give extra focus on them. I also wanted to try and use at little color variety as possible to challenge myself in creating an interesting visual on strong values.",
     url: null,
     repo: null,
     id: "whm2025",
