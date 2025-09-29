@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/figportfolio2024/static/css/main.5165c5aa.css",
-    "main.js": "/figportfolio2024/static/js/main.fb864980.js",
+    "main.js": "/figportfolio2024/static/js/main.5fa358a1.js",
     "static/media/silksong.jpg": "/figportfolio2024/static/media/silksong.73894a177e16bc5e74c6.jpg",
     "static/media/zelink-accordion.jpg": "/figportfolio2024/static/media/zelink-accordion.1a972103039fb55f235e.jpg",
     "static/media/witch.jpg": "/figportfolio2024/static/media/witch.a4f07e921f343356237f.jpg",
@@ -39,10 +39,10 @@
     "static/media/pokeroster-prev.jpg": "/figportfolio2024/static/media/pokeroster-prev.6e146b21ed53949aa2ff.jpg",
     "index.html": "/figportfolio2024/index.html",
     "main.5165c5aa.css.map": "/figportfolio2024/static/css/main.5165c5aa.css.map",
-    "main.fb864980.js.map": "/figportfolio2024/static/js/main.fb864980.js.map"
+    "main.5fa358a1.js.map": "/figportfolio2024/static/js/main.5fa358a1.js.map"
   },
   "entrypoints": [
     "static/css/main.5165c5aa.css",
-    "static/js/main.fb864980.js"
+    "static/js/main.5fa358a1.js"
   ]
 }
