@@ -73,7 +73,7 @@ export const galleryData = [
     prev: acPrev,
     display: [ac1],
     tools: ["Figma", "React Framework", "GSAP", "Procreate"],
-    desc: "An Advent Calendar created",
+    desc: "An Advent Calendar created using both Figma for art and VSCode for development. I explored several color palettes and vectored out different shapes/illustrations for the concepting stage. Once I found the right palette, I began to vector out illustrations for each number on the calendar. Behind the numbers is an illustration hidden that will show fully on Christmas Day. For the site's function, days that were not present yet could not be opened, and days that could be opened would showcase a memory + photo. If the day was in the past, it would not display, but could be shown again by clicking the 'Show Past Dates' button in the menu.",
     url: "https://hollyefig.github.io/adventcalendar2025showcase/",
     repo: "https://github.com/hollyefig/adventcalendar2025showcase",
     id: "ac2025",
