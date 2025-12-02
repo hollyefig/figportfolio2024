@@ -41,7 +41,9 @@ import zelinkAccordionPrev from "../../IMGs/gallery/prevs/zelink-accordion-prev.
 import zelinkAccordion from "../../IMGs/gallery/displays/zelink-accordion.jpg";
 import silksongPrev from "../../IMGs/gallery/prevs/silksong-prev.jpg";
 import silksong from "../../IMGs/gallery/displays/silksong.jpg";
-
+import acPrev from "../../IMGs/gallery/prevs/ac-prev.jpg";
+import ac1 from "../../IMGs/gallery/displays/advent-calendar-1.png";
+import ac2 from "../../IMGs/gallery/displays/advent-calendar-2.png";
 export const galleryData = [
   {
     name: "Poke Party Site",
@@ -64,6 +66,17 @@ export const galleryData = [
     url: null,
     repo: null,
     id: "zelinkVector",
+  },
+  {
+    name: "Advent Calendar 2025",
+    type: 2,
+    prev: acPrev,
+    display: [ac1],
+    tools: ["Figma", "React Framework", "GSAP", "Procreate"],
+    desc: "An Advent Calendar created",
+    url: "https://hollyefig.github.io/adventcalendar2025showcase/",
+    repo: "https://github.com/hollyefig/adventcalendar2025showcase",
+    id: "ac2025",
   },
   {
     name: "Weather App",
